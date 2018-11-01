@@ -1,0 +1,266 @@
+{
+	// Place your snippets for scss here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"SPLTF_Font_Size_Props": {
+		"prefix": "font",
+		"body": [
+			"$$fs: ${2:16};",
+			"font-size: rem($$fs);",
+			"letter-spacing: ls(${3:1}, $$fs);",
+			"line-height: lh(${4:20}, $$fs);"
+		],
+		"description": "Font size properties with line-height and letter-spacing"
+  },
+
+  "SPLTF_before": {
+		"prefix": ":before",
+		"body": [
+			"::before {",
+			"\tcontent: '';",
+			"\t$0",
+			"};"
+		],
+		"description": "::before pseudo selector"
+  },
+  
+  "SPLTF_after": {
+		"prefix": ":after",
+		"body": [
+			"::after {",
+			"\tcontent: '';",
+			"\t$0",
+			"};"
+		],
+		"description": "::after pseudo selector"
+  },
+  
+  "SPLTF_REM": {
+		"prefix": "rem",
+		"body": [
+			"rem(${1:fontsize});"
+		],
+		"description": "REM calc"
+  },
+  
+  "SPLTF_EM": {
+		"prefix": "em",
+		"body": [
+			"em(${1:fontsize}, ${2:parentsize});"
+		],
+		"description": "EM calc"
+  },
+  
+  "SPLTF_VW": {
+		"prefix": "vw",
+		"body": [
+			"vw(${1:fontsize});"
+		],
+		"description": "VW calc"
+  },
+  
+  "SPLTF_Flex_Center": {
+		"prefix": "flex-center",
+		"body": [
+      "display: flex;",
+      "justify-content: center;",
+      "align-items: center;",
+      "$0"
+		],
+		"description": "Flexbox center"
+  },
+  
+  "SPLTF_Important": {
+		"prefix": "!",
+		"body": [
+			"!important${1:;}$0"
+		]
+  },
+  
+	"SPLTF_@include": {
+		"prefix": "include",
+		"body": "@include ${0};",
+		"description": "Include a mixin."
+  },
+  
+	"SPLTF_@extend": {
+		"prefix": "extend",
+		"body": "@extend $0;",
+		"description": "Extend another CSS class."
+  },
+  
+	"SPLTF_@if": {
+		"prefix": "if",
+		"body": [
+			"@if ${1:conditions} {",
+			"\t$0",
+			"}"
+		],
+		"description": "@if."
+  },
+
+  "SPLTF_@elseif": {
+		"prefix": "elseif",
+		"body": [
+			"@else if ${1:conditions} {",
+			"\t$0",
+			"}"
+		],
+		"description": "@else if"
+  },
+
+  "SPLTF_@else": {
+		"prefix": "else",
+		"body": [
+			"@else {",
+			"\t$0",
+			"}"
+		],
+		"description": "@else"
+  },
+  
+	"SPLTF_@mixin": {
+		"prefix": "mixin",
+		"body": [
+			"@mixin ${1:name} {",
+			"\t$0",
+			"}"
+		],
+		"description": "Mixins allow you to define styles that can be re-used throughout the stylesheet."
+  },
+  
+	"SPLTF_@function": {
+		"prefix": "func",
+		"body": [
+			"@function ${1:name}(${2:arguments}) {",
+			"\t@return ${3:returnValue};",
+			"}"
+		],
+		"description": "Define your own functions."
+  },
+  
+  "SPLTF_transition_longhand": {
+		"prefix": "trans",
+		"body": [
+			"transition-property: ${1:all};",
+			"transition-duration: ${2:.3s};",
+      "transition-delay: ${3:0s};",
+      "transition-timing-function: ${4:ease};"
+		],
+		"description": "Transition longhand"
+  },
+  
+  "SPLTF_keyframes": {
+		"prefix": "keyframes",
+		"body": [
+			"@keyframes ${1:name} {",
+      "\t0% {",
+      "\t\t$2",
+      "\t}",
+      "\t100% {",
+      "\t\t$3",
+      "\t}",
+      "}"
+		],
+		"description": "@keyframes"
+	},
+
+  "SPLTF_MQ_Above": {
+		"prefix": "above",
+		"body": [
+			"@include above(${1:size}) {",
+			"\t$2",
+			"}"
+		],
+		"description": ""
+  },
+
+  "SPLTF_MQ_Below": {
+		"prefix": "below",
+		"body": [
+			"@include below(${1:size}) {",
+			"\t$2",
+			"}"
+		],
+		"description": ""
+  },
+
+  "SPLTF_MQ_Between": {
+		"prefix": "between",
+		"body": [
+			"@include between(${1:size_1}, ${2:size_2}) {",
+			"\t$3",
+			"}"
+		],
+		"description": ""
+  },
+
+  "SPLTF_visually-hidden": {
+		"prefix": "hidden-visually",
+		"body": [
+      "@include visually-hidden();",
+      "$0"
+		],
+		"description": ""
+  },
+
+  "SPLTF_hidetext": {
+		"prefix": "hide-text",
+		"body": [
+      "@include hidetext();",
+      "$0"
+		],
+		"description": ""
+  },
+
+  "SPLTF_form_radio": {
+		"prefix": "radio",
+		"body": [
+      ".${1:radio} {",
+      "\t// visually hide the input",
+      "\tdisplay: inline-block;",
+      "",
+      "\t&__input {",
+      "\t\t@include visually-hidden();",
+      "\t}",
+      "",
+      "\t&__label {",
+      "\t\t// text styles",
+      "\t\tcursor: pointer;",
+      "\t\tdisplay: inline-flex;",
+      "\t\talign-items: center;",
+      "",
+      "\t\t&::before {",
+      "\t\t\t// radio-button styles for default state",
+      "\t\t\t@include ${2:circle}(rem(${3:16}));",
+      "\t\t\tcontent: '';",
+      "\t\t\tdisplay: inline-block;",
+      "\t\t\tborder: 1px solid ${4:black};",
+      "\t\t\tbackground-color: ${5:white}",
+      "\t\t\t}",
+      "\t\t}",
+      "",
+      "\t&__input:checked + &__label {",
+      "\t\t&::before {",
+      "\t\t\t// radio-button styles for checked state",
+      "\t\t\tborder-color: ${4:black};",
+      "\t\t\tbackground-color: ${4:black}",
+      "\t\t\tbox-shadow: inset 0 0 0 3px ${5:white};",
+      "\t\t}",
+      "\t}",
+      "}"
+		],
+		"description": ""
+  }
+}

@@ -1,0 +1,25 @@
+{
+    "workbench.iconTheme": "seti",
+    "editor.wordWrap": true,
+    "editor.renderIndentGuides": false,
+    "editor.fontFamily": "Fira Code iScript",
+    "editor.fontWeight": "300",
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Horizon",
+    "materialTheme.fixIconsRunning": false,
+    "editor.tokenColorCustomizations": { 
+        "textMateRules": [ { 
+            "scope": [ "comment", ], 
+            "settings": { "fontStyle": "italic", } 
+            } 
+        ]
+    },
+    "window.zoomLevel": 0,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "files.exclude": {
+        "**/node_modules": true
+    },
+    "editor.tabCompletion": "on"
+}       
